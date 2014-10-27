@@ -40,3 +40,39 @@ func Test_negaNumber_type(t *testing.T) {
 		t.Errorf("negaNumber is the wrong type. Expected int32, got %T", negaNumber)
 	}
 }
+
+func Test_char_exists(t *testing.T) {
+	if char != 'H' {
+		t.Errorf("Something went wrong with char declaration: %q", char)
+	}
+}
+
+func Test_char_type(t *testing.T) {
+  if tp := reflect.TypeOf(char).Kind(); tp != reflect.Int32 {
+    t.Errorf("char is the wrong type. Expected rune, got %T", char)
+  }
+}
+
+func Test_letterFromChar_exists(t *testing.T) {
+  if letterFromChar != "H" {
+    t.Errorf("Something went wrong with letterFromChar declaration: %v", letterFromChar)
+  }
+}
+
+func Test_letterFromChar_type(t *testing.T) {
+  if tp := reflect.TypeOf(letterFromChar).Kind(); tp != reflect.String {
+    t.Errorf("letterFromChar is the wrong type. Expected string, got %T", letterFromChar)
+  }
+}
+
+func Test_numberFromChar_exists(t *testing.T) {
+  if numberFromChar != 72 {
+    t.Errorf("Something went wrong with numberFromChar declaration: %v", numberFromChar)
+  }
+}
+
+func Test_numberFromChar_type(t *testing.T) {
+  if tp := reflect.TypeOf(numberFromChar).Kind(); tp != reflect.Int64 {
+    t.Errorf("numberFromChar is the wrong type. Expected string, got %T", numberFromChar)
+  }
+}

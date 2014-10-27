@@ -48,43 +48,43 @@ func Test_char_exists(t *testing.T) {
 }
 
 func Test_char_type(t *testing.T) {
-  if tp := reflect.TypeOf(char).Kind(); tp != reflect.Int32 {
-    t.Errorf("char is the wrong type. Expected rune, got %T", char)
-  }
+	if tp := reflect.TypeOf(char).Kind(); tp != reflect.Int32 {
+		t.Errorf("char is the wrong type. Expected rune, got %T", char)
+	}
 }
 
 func Test_letterFromChar_exists(t *testing.T) {
-  if letterFromChar != "Q" {
-    t.Errorf("Something went wrong with letterFromChar declaration: %v", letterFromChar)
-  }
+	if letterFromChar != "Q" {
+		t.Errorf("Something went wrong with letterFromChar declaration: %v", letterFromChar)
+	}
 }
 
 func Test_letterFromChar_type(t *testing.T) {
-  if tp := reflect.TypeOf(letterFromChar).Kind(); tp != reflect.String {
-    t.Errorf("letterFromChar is the wrong type. Expected string, got %T", letterFromChar)
-  }
+	if tp := reflect.TypeOf(letterFromChar).Kind(); tp != reflect.String {
+		t.Errorf("letterFromChar is the wrong type. Expected string, got %T", letterFromChar)
+	}
 }
 
 func Test_numberFromChar_exists(t *testing.T) {
-  if numberFromChar != 81 {
-    t.Errorf("Something went wrong with numberFromChar declaration: %v", numberFromChar)
-  }
+	if numberFromChar != 81 {
+		t.Errorf("Something went wrong with numberFromChar declaration: %v", numberFromChar)
+	}
 }
 
 func Test_numberFromChar_type(t *testing.T) {
-  if tp := reflect.TypeOf(numberFromChar).Kind(); tp != reflect.Int64 {
-    t.Errorf("numberFromChar is the wrong type. Expected string, got %T", numberFromChar)
-  }
+	if tp := reflect.TypeOf(numberFromChar).Kind(); tp != reflect.Int64 {
+		t.Errorf("numberFromChar is the wrong type. Expected string, got %T", numberFromChar)
+	}
 }
 
 func Test_cryBaby_exists(t *testing.T) {
-  if cryBaby != "QQ" {
-    t.Errorf("Something went wrong with cryBaby declaration: %v", cryBaby)
-  }
+	if cryBaby != "QQ" {
+		t.Errorf("Something went wrong with cryBaby declaration: %v", cryBaby)
+	}
 }
 
 func Test_charIntString_exists(t *testing.T) {
-  if charIntString != "81" {
-    t.Errorf("Something went wrong with charIntString declaration: %v", charIntString)
-  }
+	if charIntString != "81" {
+		t.Errorf("Something went wrong with charIntString declaration: %v", charIntString)
+	}
 }

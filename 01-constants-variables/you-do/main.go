@@ -27,5 +27,5 @@ var numberFromChar = int64(char)
 var cryBaby = letterFromChar + string(numberFromChar)
 
 // declare a variable charIntString which is set to a string type representation of numberFromChar
-// HINT: import "strconv" --- strconv.Itoa(int32)
+// HINT: import "strconv" --- strconv.Itoa(T int32)
 var charIntString = strconv.Itoa(int(numberFromChar))

@@ -42,7 +42,7 @@ func Test_negaNumber_type(t *testing.T) {
 }
 
 func Test_char_exists(t *testing.T) {
-	if char != 'H' {
+	if char != 'Q' {
 		t.Errorf("Something went wrong with char declaration: %q", char)
 	}
 }
@@ -54,7 +54,7 @@ func Test_char_type(t *testing.T) {
 }
 
 func Test_letterFromChar_exists(t *testing.T) {
-  if letterFromChar != "H" {
+  if letterFromChar != "Q" {
     t.Errorf("Something went wrong with letterFromChar declaration: %v", letterFromChar)
   }
 }
@@ -66,7 +66,7 @@ func Test_letterFromChar_type(t *testing.T) {
 }
 
 func Test_numberFromChar_exists(t *testing.T) {
-  if numberFromChar != 72 {
+  if numberFromChar != 81 {
     t.Errorf("Something went wrong with numberFromChar declaration: %v", numberFromChar)
   }
 }
@@ -74,5 +74,17 @@ func Test_numberFromChar_exists(t *testing.T) {
 func Test_numberFromChar_type(t *testing.T) {
   if tp := reflect.TypeOf(numberFromChar).Kind(); tp != reflect.Int64 {
     t.Errorf("numberFromChar is the wrong type. Expected string, got %T", numberFromChar)
+  }
+}
+
+func Test_cryBaby_exists(t *testing.T) {
+  if cryBaby != "QQ" {
+    t.Errorf("Something went wrong with cryBaby declaration: %v", cryBaby)
+  }
+}
+
+func Test_charIntString_exists(t *testing.T) {
+  if charIntString != "81" {
+    t.Errorf("Something went wrong with charIntString declaration: %v", charIntString)
   }
 }

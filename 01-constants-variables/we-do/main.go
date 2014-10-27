@@ -12,4 +12,12 @@ var cost float32 = 0.25
 // todo: declare a variable called "purchased" with the type of float32 and a value of spareChange / cost
 var purchased float32 = spareChange / cost
 
-// declare a variable called "curlWeight" of type int and set it equal to 25
+// todo: declare a variable called "snack" with the type of string and a value of "pretzels",
+// and another called "bang" with a value of "!!!",
+// and another called "excitedSnack" with a value of snack + bang
+// !!! Declare them writing 'var' and 'string' only once !!!
+var (
+	snack        string = "pretzels"
+	bang                = "!!!"
+	excitedSnack        = snack + bang
+)

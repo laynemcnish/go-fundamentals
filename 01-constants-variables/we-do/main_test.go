@@ -25,7 +25,7 @@ func Test_spareChange_type(t *testing.T) {
 
 func Test_cost_exists(t *testing.T) {
 	if cost != 0.25 {
-		t.Errorf("Something went wrong with your cost declartaion: %v", cost)
+		t.Errorf("Something went wrong with your cost declaration: %v", cost)
 	}
 }
 
@@ -41,9 +41,20 @@ func Test_purchased_exists(t *testing.T) {
 	}
 }
 
-// func Test_circumference(t *testing.T) {
-// 	if circumference != float32(diameter)*pi {
-// 		t.Errorf("Something went wrong with determining circumference: %v", circumference)
-// 	}
-//
-// }
+func Test_snack_exists(t *testing.T) {
+	if snack != "pretzels" {
+		t.Errorf("Something went wrong with your snack declaration %q", snack)
+	}
+}
+
+func Test_bang_exists(t *testing.T) {
+	if bang != "!!!" {
+		t.Errorf("Something went wrong with your bang declaration %q", bang)
+	}
+}
+
+func Test_excitedSnack_exists(t *testing.T) {
+	if excitedSnack != "pretzels!!!" {
+		t.Errorf("Something went wrong with your excitedSnack declaration %q", excitedSnack)
+	}
+}

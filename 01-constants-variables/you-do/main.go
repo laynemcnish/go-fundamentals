@@ -1,8 +1,7 @@
 package main
 
 import "strconv"
-import "fmt"
-import "reflect"
+
 // declare a constant typedFloat, give it a type of float32, set it equal to 4.0
 const typedFloat float32 = 4.0
 
@@ -33,16 +32,11 @@ var charIntString = strconv.Itoa(int(numberFromChar))
 
 // EXTRA CREDIT
 
-// declare a constant that has four integer iota values ranging from 0 to 3
-// Name them "Agape", "Phileo", "Storge" and "Eros"
+// declare constants that have four integer iota values ranging from 0 to 3
+// Name them "Agape", "Phileo", "Storge" and "Eros" (if you've written any numbers, you've done it wrong!)
 const (
 	Agape int = iota
 	Phileo
 	Storge
 	Eros
 )
-var test = reflect.TypeOf(Phileo).Kind()
-func main(){
-  fmt.Println(Eros)
-  fmt.Println(test)
-}

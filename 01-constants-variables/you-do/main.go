@@ -72,6 +72,13 @@ const (
 	Pompeius
 )
 
+// alternate
+// const (
+// 	Caesar int = iota + 1
+// 	Crassus
+// 	Pompeius
+// )
+
 // ultra-iota: use iota to create a complex set of values for six nutrient constants.
 // !!! Never type a number larger than 2 and no more than two numbers written !!!
 // declare the constants in the following order:

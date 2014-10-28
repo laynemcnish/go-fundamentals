@@ -44,6 +44,18 @@ func Test_untypedFloat_type(t *testing.T) {
 	}
 }
 
+func Test_x_exists(t *testing.T) {
+	if x != -1 {
+		t.Errorf("Something went wrong with x declaration: %v", x)
+	}
+}
+
+func Test_y_exists(t *testing.T) {
+	if y != -3 {
+		t.Errorf("Something went wrong with y declaration: %v", y)
+	}
+}
+
 func Test_bigSixtyFour_exists(t *testing.T) {
 	if bigSixtyFour != 9223372036854775807 {
 		t.Errorf("Something went wrong with bigSixtyFour declaration: %v", bigSixtyFour)

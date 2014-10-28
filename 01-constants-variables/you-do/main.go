@@ -20,6 +20,9 @@ const typedFloat float32 = 4.0
 // declare a constant untypedFloat, do NOT assign it a type (i.e. let it be the default type)- set it equal to 4.0
 const untypedFloat = 4.0
 
+// on only one line declare two variables x and y, both float32 type, and give them values -1, -3 respectively
+var x, y float32 = -1, -3
+
 // declare a variable bigSixtyFour, assign it a type of int64 and set it to its largest possible positive number
 var bigSixtyFour int64 = 9223372036854775807
 

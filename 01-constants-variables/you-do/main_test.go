@@ -5,6 +5,33 @@ import (
 	"testing"
 )
 
+func Test_sandwich_exists(t *testing.T) {
+	if sandwich != "pork chop" {
+		t.Errorf("Something went wrong with sandwich declaration: %v", sandwich)
+	}
+}
+
+func Test_sandwich_type(t *testing.T) {
+	if tp := reflect.TypeOf(sandwich).Kind(); tp != reflect.String {
+		t.Errorf("sandwich is the wrong type. Expected string, got %T", sandwich)
+	}
+}
+
+func Test_rank_vars_value(t *testing.T) {
+	if first != 1 {
+		t.Errorf("Something went wrong with first declaration: %v", first)
+	}
+	if second != 2 {
+		t.Errorf("Something went wrong with second declaration: %v", second)
+	}
+	if third != 3 {
+		t.Errorf("Something went wrong with third declaration: %v", third)
+	}
+	if fourth != 4 {
+		t.Errorf("Something went wrong with fourth declaration: %v", fourth)
+	}
+}
+
 func Test_typedFloat_type(t *testing.T) {
 	if tp := reflect.TypeOf(typedFloat).Kind(); tp != reflect.Float32 {
 		t.Errorf("typedFloat is the wrong type. Expected Float32, got %T", typedFloat)
@@ -111,17 +138,17 @@ func Test_fishMeasure_attributes(t *testing.T) {
 		Length:      39,
 		Weight:      0.75,
 	}
-	if fish.commonName != "cutbow" {
-		t.Errorf("fishMeasure Common Name throwing an error: %v", fish.commonName)
+	if fish.CommonName != "cutbow" {
+		t.Errorf("fishMeasure Common Name throwing an error: %v", fish.CommonName)
 	}
-	if fish.scienceName != "Oncorhynchus clarki x mykiss" {
-		t.Errorf("fishMeasure Science Name throwing an error: %v", fish.scienceName)
+	if fish.ScienceName != "Oncorhynchus clarki x mykiss" {
+		t.Errorf("fishMeasure Science Name throwing an error: %v", fish.ScienceName)
 	}
-	if fish.length != 39 {
-		t.Errorf("fishMeasure length throwing an error: %v", fish.length)
+	if fish.Length != 39 {
+		t.Errorf("fishMeasure Length throwing an error: %v", fish.Length)
 	}
-	if fish.weight != 0.75 {
-		t.Errorf("fishMeasure weight throwing an error: %v", fish.weight)
+	if fish.Weight != 0.75 {
+		t.Errorf("fishMeasure Weight throwing an error: %v", fish.Weight)
 	}
 }
 
@@ -132,7 +159,7 @@ func Test_fishMeasure_type(t *testing.T) {
 		Length:      39,
 		Weight:      0.75,
 	}
-	if reflect.TypeOf(fish).Kind() != struct{
-		t.Errorf("expected fishMeasure to be struct, got %T",fish)
+	if reflect.TypeOf(fish).Kind() != reflect.Struct {
+		t.Errorf("expected fishMeasure to be struct, got %T", fish)
 	}
 }

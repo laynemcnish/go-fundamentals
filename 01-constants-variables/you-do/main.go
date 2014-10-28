@@ -2,6 +2,18 @@ package main
 
 import "strconv"
 
+// declare a variable string called sandwich and give it a value of "pork chop"
+var sandwich = "pork chop"
+
+// declare four variables first, second, third, fourth, each an int with a value of 1, 2, 3, 4
+// do not write 'var' or 'int' more than once!
+var (
+	first  int = 1
+	second     = 2
+	third      = 3
+	fourth     = 4
+)
+
 // declare a constant typedFloat, give it a type of float32, set it equal to 4.0
 const typedFloat float32 = 4.0
 

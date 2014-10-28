@@ -33,10 +33,20 @@ var charIntString = strconv.Itoa(int(numberFromChar))
 // EXTRA CREDIT
 
 // declare constants that have four integer iota values ranging from 0 to 3
-// Name them "Agape", "Phileo", "Storge" and "Eros" (if you've written any numbers, you've done it wrong!)
+// Name them Agape, Phileo, Storge and Eros (if you've written any numbers, you've done it wrong!)
 const (
 	Agape int = iota
 	Phileo
 	Storge
 	Eros
 )
+
+// create a new struct called fishMeasure which contains a fish species' common name, scientific name,
+// standard length, and weight. Use variable names- CommonName, ScienceName, Length, Weight
+// length in cm should be an int and weight a float32 in kg
+type fishMeasure struct {
+	CommonName  string
+	ScienceName string
+	Length      int
+	Weight      float32
+}

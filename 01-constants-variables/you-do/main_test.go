@@ -103,3 +103,36 @@ func Test_intIota_values(t *testing.T) {
 		t.Errorf("Something went wrong with Eros iota: %v", Eros)
 	}
 }
+
+func Test_fishMeasure_attributes(t *testing.T) {
+	fish := fishMeasure{
+		CommonName:  "cutbow",
+		ScienceName: "Oncorhynchus clarki x mykiss",
+		Length:      39,
+		Weight:      0.75,
+	}
+	if fish.commonName != "cutbow" {
+		t.Errorf("fishMeasure Common Name throwing an error: %v", fish.commonName)
+	}
+	if fish.scienceName != "Oncorhynchus clarki x mykiss" {
+		t.Errorf("fishMeasure Science Name throwing an error: %v", fish.scienceName)
+	}
+	if fish.length != 39 {
+		t.Errorf("fishMeasure length throwing an error: %v", fish.length)
+	}
+	if fish.weight != 0.75 {
+		t.Errorf("fishMeasure weight throwing an error: %v", fish.weight)
+	}
+}
+
+func Test_fishMeasure_type(t *testing.T) {
+	fish := fishMeasure{
+		CommonName:  "cutbow",
+		ScienceName: "Oncorhynchus clarki x mykiss",
+		Length:      39,
+		Weight:      0.75,
+	}
+	if reflect.TypeOf(fish).Kind() != struct{
+		t.Errorf("expected fishMeasure to be struct, got %T",fish)
+	}
+}

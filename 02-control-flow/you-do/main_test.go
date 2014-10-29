@@ -18,3 +18,22 @@ func Test_wordMatch(t *testing.T) {
 		}
 	}
 }
+
+func Test_doubleUp(t *testing.T) {
+	type test struct {
+		name     string
+		a, b     int
+		expected string
+	}
+	tests := []test{
+		test{name: "a double of b", a: 4, b: 2, expected: "double up!"},
+		test{name: "a equal to b", a: 4, b: 4, expected: "no double..."},
+    test{name: "a half of b", a: 4, b: 8, expected: "double up!"},
+	}
+	for _, tt := range tests {
+		result := doubleUp(tt.a, tt.b)
+		if result != tt.expected {
+			t.Errorf("Test %q failed. got :%d, expected: %d", tt.name, result, tt.expected)
+		}
+	}
+}

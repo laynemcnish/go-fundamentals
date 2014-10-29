@@ -1,11 +1,11 @@
 package main
 
-func FruitOrVegatable(v string) string {
+func FruitOrVegetable(v string) string {
 	switch v {
 	case "Apple", "Orange", "Banana":
 		return "Fruit"
 	case "Onion", "Broccoli", "Celery":
-		return "Vegatable"
+		return "Vegetable"
 	default:
 		return "Neither"
 	}

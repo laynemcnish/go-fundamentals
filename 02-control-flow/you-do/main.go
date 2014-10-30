@@ -17,4 +17,10 @@ func doubleUp(a, b int) string {
 	return "no double..."
 }
 
-// create a function which takes a rune and returns true if the rune's value is greater than 50
+// create a function runeToNum which takes a rune and returns true if the rune's value is greater than 50, otherwise false
+func runeToNum(r rune) bool {
+	if r > 50 {
+		return true
+	}
+	return false
+}

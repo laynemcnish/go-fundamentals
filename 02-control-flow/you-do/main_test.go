@@ -38,3 +38,20 @@ func Test_doubleUp(t *testing.T) {
 		}
 	}
 }
+
+func Test_runeToNum(t *testing.T) {
+	type test struct {
+		r rune
+		expected bool
+	}
+	tests := []test{
+		test{r:'F', expected:true},
+		test{r:'/', expected:false},
+	}
+	for _, tt := range tests {
+		result := runeToNum(tt.r)
+		if result != tt.expected {
+			t.Errorf("runeToNum(%d) = %d, want %d",tt.r, result, tt.expected)
+		}
+	}
+}

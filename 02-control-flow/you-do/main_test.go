@@ -111,3 +111,20 @@ func Test_threeString(t *testing.T) {
 		}
 	}
 }
+
+func Test_topThree(t *testing.T) {
+	type test struct {
+		b        bool
+		i        int
+		expected string
+	}
+	tests := []test{
+		test{b: true, i: 1, expected: "1."},
+	}
+	for _, tt := range tests {
+		result := topThree(tt.b, tt.i)
+		if result != tt.expected {
+			t.Errorf("topThree(%v, %v) = %d, want %v", tt.b, tt.i, result, tt.expected)
+		}
+	}
+}

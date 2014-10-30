@@ -72,3 +72,33 @@ func threeString(s1, s2, s3 string) string {
 		return s1
 	}
 }
+
+// create a function topThree which takes in a boolean and an integer. If the boolean is true, switch on the integer
+// such that 1 returns "1.", 2 returns "2.", 3 returns "3." and any other integer returns "not good enough".
+// When the boolean is false, switch on the integer such that 1 returns "One:", 2 returns "Two:" and 3 "Three:"
+// and anything else returns "not good enough".
+func topThree(b bool, i int) string {
+	if b == true {
+		switch i {
+		case 1:
+			return "1."
+		case 2:
+			return "2."
+		case 3:
+			return "3."
+		default:
+			return "not good enough"
+		}
+	} else {
+		switch i {
+		case 1:
+			return "One:"
+		case 2:
+			return "Two:"
+		case 3:
+			return "Three:"
+		default:
+			return "not good enough"
+		}
+	}
+}

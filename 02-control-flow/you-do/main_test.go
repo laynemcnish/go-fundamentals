@@ -93,3 +93,21 @@ func Test_correctByte(t *testing.T) {
 		}
 	}
 }
+
+func Test_threeString(t *testing.T) {
+	type test struct {
+		s1       string
+		s2       string
+		s3       string
+		expected string
+	}
+	tests := []test{
+		test{s1: "stop", s2: "second string", s3: "third string", expected: "second string"},
+	}
+	for _, tt := range tests {
+		result := threeString(tt.s1, tt.s2, tt.s3)
+		if result != tt.expected {
+			t.Errorf("threeString(%v, %v, %v) = %d, want %v", tt.s1, tt.s2, tt.s3, result, tt.expected)
+		}
+	}
+}

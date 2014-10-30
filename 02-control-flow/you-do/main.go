@@ -43,7 +43,7 @@ func multipleByte(i int) string {
 
 // Similar to the previous function, let us write a function correctByte which will return the binary value
 // of a metric decimal value (e.g. 1000 will return 1024). I only care about exact matches of 1000, 1000**2, and
-// 1000*3; everything else should just return the decimal value.
+// 1000**3; everything else should just return the decimal value.
 func correctByte(i int) int {
 	switch i {
 	case 1000:
@@ -54,5 +54,21 @@ func correctByte(i int) int {
 		return 1073741824
 	default:
 		return i
+	}
+}
+
+// create a function threeString which takes three strings. If the first string is "stop", return the second string.
+// If the first string is "go" return the third string. If the first string is "golang" return "awesome!!!"
+// otherwise return the first string.
+func threeString(s1, s2, s3 string) string {
+	switch s1 {
+	case "stop":
+		return s2
+	case "go":
+		return s3
+	case "golang":
+		return "awesome!!!"
+	default:
+		return s1
 	}
 }

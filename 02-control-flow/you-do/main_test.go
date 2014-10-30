@@ -56,22 +56,40 @@ func Test_runeToNum(t *testing.T) {
 	}
 }
 
-func Test_runeInAlphabet(t *testing.T) {
+func Test_multipleByte(t *testing.T) {
 	type test struct {
-		r        rune
+		i        int
 		expected string
 	}
 	tests := []test{
-		test{r: 'F', expected: "capital letter"},
-		test{r: 'c', expected: "lowercase letter"},
-		test{r: 'Z', expected: "capital letter"},
-		test{r: 'a', expected: "lowercase letter"},
-		test{r: '/', expected: "not a letter"},
+		test{i: 1024, expected: "kibibyte"},
+		test{i: 1025, expected: "inexact"},
+		test{i: 1048576, expected: "mebibyte"},
+		test{i: 1073741824, expected: "gibibyte"},
 	}
 	for _, tt := range tests {
-		result := runeInAlphabet(tt.r)
+		result := multipleByte(tt.i)
 		if result != tt.expected {
-			t.Errorf("runeInAlphabet(%d) = %d, want %v", tt.r, result, tt.expected)
+			t.Errorf("multipleByte(%d) = %d, want %v", tt.i, result, tt.expected)
+		}
+	}
+}
+
+func Test_correctByte(t *testing.T) {
+	type test struct {
+		i        int
+		expected int
+	}
+	tests := []test{
+		test{i: 1000, expected: 1024},
+		test{i: 1000000, expected: 1048576},
+		test{i: 1000000000, expected: 1073741824},
+		test{i: 5, expected: 5},
+	}
+	for _, tt := range tests {
+		result := correctByte(tt.i)
+		if result != tt.expected {
+			t.Errorf("correctByte(%d) = %d, want %v", tt.i, result, tt.expected)
 		}
 	}
 }

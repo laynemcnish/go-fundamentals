@@ -25,17 +25,34 @@ func runeToNum(r rune) bool {
 	return false
 }
 
-// Knowing if it is a rune is nice, but let us see if the rune is a letter in the alphabet. Write a function
-// called runeInAlphabet which takes a rune and returns "capital letter" if the letter is in the English alphabet
-// and "lowercase letter" if it is lowercase, and "not a letter" if it is not in the alphabet.
-// HINT: Ken Thompson made this self-synchronizing design outline with Rob Pike on Sept 2, 1992 on a placemat in a New Jersey diner.
-func runeInAlphabet(r rune) string {
-	switch {
-	case r >= 65 && r <= 90:
-		return "capital letter"
-	case r >= 97 && r <= 122:
-		return "lowercase letter"
+// write a function multipleByte which returns "kibibyte" if an integer matches one kebibyte value,
+// "mebibyte" if it matches the value of one mebibyte, and "gibibyte" if it matches the value of one gibibyte.
+// otherwise it should return "inexact".
+func multipleByte(i int) string {
+	switch i {
+	case 1024:
+		return "kibibyte"
+	case 1048576:
+		return "mebibyte"
+	case 1073741824:
+		return "gibibyte"
 	default:
-		return "not a letter"
+		return "inexact"
+	}
+}
+
+// Similar to the previous function, let us write a function correctByte which will return the binary value
+// of a metric decimal value (e.g. 1000 will return 1024). I only care about exact matches of 1000, 1000**2, and
+// 1000*3; everything else should just return the decimal value.
+func correctByte(i int) int {
+	switch i {
+	case 1000:
+		return 1024
+	case 1000000:
+		return 1048576
+	case 1000000000:
+		return 1073741824
+	default:
+		return i
 	}
 }

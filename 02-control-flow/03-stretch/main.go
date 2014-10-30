@@ -1,9 +1,9 @@
-//TODO type assertion swtich
+package main
 
 import "reflect"
 
 func whatAmI(v interface{}) {
-	switch t := relect.TypeOf(v); t {
+	switch t := reflect.TypeOf(v); t {
 	case t.Kind() == reflect.String:
 		return "String"
 

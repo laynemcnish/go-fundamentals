@@ -9,5 +9,5 @@ func FruitOrVegetable(v string) string {
 	default:
 		return "Neither"
 	}
-
+	panic("unreachable")
 }

@@ -17,7 +17,7 @@ var purchased float32 = spareChange / cost
 // and another called "excitedSnack" with a value of snack + bang
 // !!! Declare them writing 'var' and 'string' only once !!!
 var (
-	snack        string = "pretzels"
+	snack        			  = "pretzels"
 	bang                = "!!!"
 	excitedSnack        = snack + bang
 )

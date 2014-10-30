@@ -22,7 +22,7 @@ func Test_Max(t *testing.T) {
 	for _, tt := range tests {
 		result := Max(tt.x, tt.y)
 		if result != tt.expected {
-			t.Errorf("Test %q failed.  got: %d, expected: %d", tt.name, result, tt.expected)
+			t.Errorf("Max(%d, %d) = %d, want %d", tt.x, tt.y, result, tt.expected)
 		}
 	}
 

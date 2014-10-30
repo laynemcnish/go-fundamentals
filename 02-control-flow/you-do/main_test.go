@@ -28,7 +28,8 @@ func Test_doubleUp(t *testing.T) {
 	tests := []test{
 		test{name: "a double of b", a: 4, b: 2, expected: "double up!"},
 		test{name: "a equal to b", a: 4, b: 4, expected: "no double..."},
-    test{name: "a half of b", a: 4, b: 8, expected: "double up!"},
+		test{name: "a not double, not equal to b", a: 1, b: 7, expected: "no double..."},
+		test{name: "a half of b", a: 4, b: 8, expected: "double up!"},
 	}
 	for _, tt := range tests {
 		result := doubleUp(tt.a, tt.b)

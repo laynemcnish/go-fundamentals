@@ -120,6 +120,13 @@ func Test_topThree(t *testing.T) {
 	}
 	tests := []test{
 		test{b: true, i: 1, expected: "1."},
+		test{b: true, i: 2, expected: "2."},
+		test{b: true, i: 3, expected: "3."},
+		test{b: true, i: 10, expected: "not good enough"},
+		test{b: false, i: 1, expected: "One:"},
+		test{b: false, i: 2, expected: "Two:"},
+		test{b: false, i: 3, expected: "Three:"},
+		test{b: false, i: 45, expected: "not good enough"},
 	}
 	for _, tt := range tests {
 		result := topThree(tt.b, tt.i)

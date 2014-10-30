@@ -14,7 +14,7 @@ func Test_wordMatch(t *testing.T) {
 	for _, tt := range tests {
 		result := wordMatch(tt.first, tt.second)
 		if result != tt.expected {
-			t.Errorf("Test %q failed. got: %d, expected %d", tt.name, result, tt.expected)
+			t.Errorf("Test %q failed. got: %d, expected %v", tt.name, result, tt.expected)
 		}
 	}
 }
@@ -34,24 +34,44 @@ func Test_doubleUp(t *testing.T) {
 	for _, tt := range tests {
 		result := doubleUp(tt.a, tt.b)
 		if result != tt.expected {
-			t.Errorf("Test %q failed. got :%d, expected: %d", tt.name, result, tt.expected)
+			t.Errorf("Test %q failed. got :%d, expected: %v", tt.name, result, tt.expected)
 		}
 	}
 }
 
 func Test_runeToNum(t *testing.T) {
 	type test struct {
-		r rune
+		r        rune
 		expected bool
 	}
 	tests := []test{
-		test{r:'F', expected:true},
-		test{r:'/', expected:false},
+		test{r: 'F', expected: true},
+		test{r: '/', expected: false},
 	}
 	for _, tt := range tests {
 		result := runeToNum(tt.r)
 		if result != tt.expected {
-			t.Errorf("runeToNum(%d) = %d, want %d",tt.r, result, tt.expected)
+			t.Errorf("runeToNum(%d) = %d, want %v", tt.r, result, tt.expected)
+		}
+	}
+}
+
+func Test_runeInAlphabet(t *testing.T) {
+	type test struct {
+		r        rune
+		expected string
+	}
+	tests := []test{
+		test{r: 'F', expected: "capital letter"},
+		test{r: 'c', expected: "lowercase letter"},
+		test{r: 'Z', expected: "capital letter"},
+		test{r: 'a', expected: "lowercase letter"},
+		test{r: '/', expected: "not a letter"},
+	}
+	for _, tt := range tests {
+		result := runeInAlphabet(tt.r)
+		if result != tt.expected {
+			t.Errorf("runeInAlphabet(%d) = %d, want %v", tt.r, result, tt.expected)
 		}
 	}
 }

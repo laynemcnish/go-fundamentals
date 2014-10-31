@@ -21,3 +21,20 @@ func Test_inlineAssign(t *testing.T) {
 		}
 	}
 }
+
+func Test_evalFifty(t *testing.T) {
+	type test struct {
+		i        int
+		expected string
+	}
+	tests := []test{
+		test{i: 26, expected: "pass"},
+		test{i: 15, expected: "fail"},
+	}
+	for _, tt := range tests {
+		result := evalFifty(tt.i)
+		if result != tt.expected {
+			t.Errorf("evalFifty(%v) = %v, want %v", tt.i, result, tt.expected)
+		}
+	}
+}

@@ -16,7 +16,7 @@ func main() {
 	// SLICES
 
 	// slices are typed only by the elements they contain, not the number of elements
-	// declare and initialize a slice of strings named gophers, each with a length of 5.
+	// declare and initialize a slice of strings named gophers with a length of 5.
 	gophers := make([]string, 5)
 
 	// at index 0 of gophers set the value equal to "Mac" and 1 to "Tosh"

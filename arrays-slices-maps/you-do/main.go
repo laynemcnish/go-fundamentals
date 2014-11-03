@@ -44,4 +44,5 @@ func main() {
 	// declare a boolean called ok which determines if classes["Earth Sciences"] exists and print ok
 	_, ok := classes["Earth Sciences"]
 	fmt.Println(ok)
+
 }

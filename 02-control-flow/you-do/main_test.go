@@ -34,7 +34,7 @@ func Test_doubleUp(t *testing.T) {
 	for _, tt := range tests {
 		result := doubleUp(tt.a, tt.b)
 		if result != tt.expected {
-			t.Errorf("Test %q failed. got :%d, expected: %v", tt.name, result, tt.expected)
+			t.Errorf("Test %q failed. got :%v, expected: %v", tt.name, result, tt.expected)
 		}
 	}
 }

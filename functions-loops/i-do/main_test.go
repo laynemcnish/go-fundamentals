@@ -26,3 +26,22 @@ func Test_splitNum(t *testing.T) {
 		}
 	}
 }
+
+func Test_howExciting(t *testing.T) {
+	type test struct {
+		n        int
+		s        string
+		expected string
+	}
+	tests := []test{
+		test{n: 2, s: "golang", expected: "golang!!"},
+		test{n: 10, s: "!", expected: "!!!!!!!!!!!"},
+		test{n: 3, s: "_/", expected: "_/!!!"},
+	}
+	for _, tt := range tests {
+		result := howExciting(tt.n, tt.s)
+		if result != tt.expected {
+			t.Errorf("howExciting(%v) = %v, want %v", tt.n, result, tt.expected)
+		}
+	}
+}

@@ -33,23 +33,23 @@ func Test_twoReturn(t *testing.T) {
 	for _, tt := range tests {
 		result1, result2 := twoReturn(tt.i1, tt.i2, tt.i3)
 		if result1 != tt.expected1 || result2 != tt.expected2 {
-			t.Errorf("twoReturn(%v, %v, %v) = %v, want %v, %v", tt.i1, tt.i2, tt.i3, result1, result2, tt.expected1, tt.expected2)
+			t.Errorf("twoReturn(%v, %v, %v) = %v,%v; want %v, %v", tt.i1, tt.i2, tt.i3, result1, result2, tt.expected1, tt.expected2)
 		}
 	}
 }
 
 func Test_coolElipsis(t *testing.T) {
-  type test struct {
-    nums []int
-    expected int
-  }
-  tests := []test{
-    test{nums:[]int{1,2,3,4}, expected:30},
-  }
-  for _, tt := range tests {
-    result := coolElipsis(tt.nums...)
-    if result != tt.expected {
-      t.Errorf("coolElipsis(%v) = %v, want %v", tt.nums, result, tt.expected)
-    }
-  }
+	type test struct {
+		nums     []int
+		expected int
+	}
+	tests := []test{
+		test{nums: []int{1, 2, 3, 4}, expected: 30},
+	}
+	for _, tt := range tests {
+		result := coolElipsis(tt.nums...)
+		if result != tt.expected {
+			t.Errorf("coolElipsis(%v) = %v, want %v", tt.nums, result, tt.expected)
+		}
+	}
 }

@@ -23,3 +23,13 @@ dividing the second argument by the third. */
 func twoReturn(i1, i2, i3 float64) (float64, float64) {
 	return i1 * i3, i2 / i3
 }
+
+/* TODO: create a variadic function coolElipsis which takes a variadic number of integers. Return the sum of each
+integer after you multiply it by its index + 1. */
+func coolElipsis(numbers ...int) int {
+	var total int
+	for i, num := range numbers {
+		total += num * (i + 1)
+	}
+	return total
+}

@@ -41,8 +41,9 @@ func main() {
 	}
 	// Print the value of classes["Earth Sciences"] - can you explain your result?
 	fmt.Println(classes["Earth Sciences"])
-	// declare a boolean called ok which determines if classes["Earth Sciences"] exists and print ok
+	// declare a boolean called ok which will be true only if classes["Earth Sciences"] exists
 	_, ok := classes["Earth Sciences"]
+	// Print the value of ok
 	fmt.Println(ok)
 
 }

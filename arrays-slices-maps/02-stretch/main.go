@@ -29,9 +29,9 @@ func main() {
 
 	// using for loops to create
 	var count int
-	for i := 0; i < 3; i++ {
+	for i := 0; i < len(threeByThree); i++ {
 		threeByThree[i] = make([]int, 3)
-		for j := 0; j < 3; j++ {
+		for j := 0; j < len(threeByThree[i]); j++ {
 			threeByThree[i][j] = count
 			count = count + 1
 		}

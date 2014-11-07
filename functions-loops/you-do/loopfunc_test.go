@@ -1,7 +1,8 @@
-package loopfunc
+package main
 
 import (
 	"fmt"
+	"math/rand"
 	"testing"
 )
 
@@ -67,4 +68,19 @@ func ExampleCorruption() {
 	// 4 damage taken from Corruption!
 	// 4 damage taken from Corruption!
 	// 8
+}
+
+func TestAttackAd(t *testing.T) {
+	rand.Seed(1) // ensures deterministic behavior for this test
+	attacks := []string{"[insert name here] is the worst politician",
+		"I find [insert name here] to be the least goodest",
+		"You'll never find [insert name here] doing the right thing"}
+	first := AttackAd("Ted", attacks)
+	for i := 0; i < 100; i++ {
+		x := AttackAd("Ted", attacks)
+		if x != first {
+			return
+		}
+	}
+	t.Errorf("Only saw one string, not random.")
 }

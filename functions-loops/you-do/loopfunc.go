@@ -1,6 +1,10 @@
-package loopfunc
+package main
 
-import "fmt"
+import (
+	"fmt"
+	"math/rand"
+	"strings"
+)
 
 // write a function Corruption which takes in an integer. Print out "4 damage taken from Corruption!" as many times
 // as the integer argument. Return the total damage taken at the end.
@@ -33,9 +37,18 @@ string with '/' as the first character. */
 func ConcatMap(mp map[string][]string, input string) string {
 	finalString := "/"
 	for _, str := range mp[input] {
-		finalString = finalString + (str + "/")
+		finalString += str + "/"
 	}
 	return finalString
 }
 
-/* write a function AttackAd */
+/* write a function AttackAd which takes a string and a slice of strings. Each string in the slice is expected
+to contain "[insert name here]". Pick a string from the slice at random and replace "[insert name here]" with
+the first string argument and return it. Each instance of "[insert name here]" should be replaced
+HINT: import "math/rand" and "strings", they have the tools you need (Replace and Intn) */
+
+func AttackAd(name string, attacks []string) string {
+	anonAttack := attacks[rand.Intn(len(attacks))]
+	attack := strings.Replace(anonAttack, "[insert name here]", name, -1)
+	return attack
+}

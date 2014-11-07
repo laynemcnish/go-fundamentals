@@ -9,9 +9,9 @@ package main
 */
 func runeInAlphabet(r rune) string {
 	switch {
-	case r >= 65 && r <= 90:
+	case r >= 'A' && r <= 'Z':
 		return "capital letter"
-	case r >= 97 && r <= 122:
+	case r >= 'a' && r <= 'z':
 		return "lowercase letter"
 	default:
 		return "not a letter"

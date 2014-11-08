@@ -1,13 +1,5 @@
 package main
 
-func FruitOrVegetable(v string) string {
-	switch v {
-	case "Apple", "Orange", "Banana":
-		return "Fruit"
-	case "Onion", "Broccoli", "Celery":
-		return "Vegetable"
-	default:
-		return "Neither"
-	}
-	panic("unreachable")
-}
+// write an equation FruitOrVegetable which takes a string and switches on the string. In the case of
+// "Apple", "Orange", "Banana", return "Fruit". For the cases "Onion", "Broccoli", "Celery" return "Vegetable".
+// The default should return "Neither"

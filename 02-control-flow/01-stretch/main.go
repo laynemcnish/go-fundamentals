@@ -7,13 +7,3 @@ package main
 	and "lowercase letter" if it is lowercase, and "not a letter" if it is not in the alphabet.
 	HINT: Ken Thompson made this self-synchronizing design outline with Rob Pike on Sept 2, 1992 on a placemat in a New Jersey diner.
 */
-func runeInAlphabet(r rune) string {
-	switch {
-	case r >= 'A' && r <= 'Z':
-		return "capital letter"
-	case r >= 'a' && r <= 'z':
-		return "lowercase letter"
-	default:
-		return "not a letter"
-	}
-}

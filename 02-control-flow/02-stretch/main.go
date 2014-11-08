@@ -6,12 +6,6 @@ package main
   the second integer, return 100, otherwise return the two input integers added together.
   !!! declare and assign a variable AFTER the 'if' but before the evaluation in the if statement !!!
 */
-func inlineAssign(i, testNum int) int {
-	if double := i * 2; double > testNum {
-		return 100
-	}
-	return testNum + i
-}
 
 /*
   TODO:
@@ -19,9 +13,3 @@ func inlineAssign(i, testNum int) int {
   value from inlineAssign is greater than or equal to 100, return "pass", otherwise "fail"
   !!! declare and assign a variable AFTER the 'if' but before the evaluation in the if statement !!!
 */
-func evalFifty(i int) string {
-	if eval := inlineAssign(i, 50); eval >= 100 {
-		return "pass"
-	}
-	return "fail"
-}

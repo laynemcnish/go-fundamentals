@@ -1,8 +1,3 @@
 package mathUtil
 
-func Max(x, y int) int {
-	if x > y {
-		return x
-	}
-	return y
-}
+// write an equation Max which takes two integers and returns the largest

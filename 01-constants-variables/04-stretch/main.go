@@ -8,9 +8,3 @@ package main
 // vitamins and protein next, both with values of 2
 // carbohydrates after that with a value of 3
 // finally comes water with a value of 6
-const (
-	minerals, fat int = iota + 1, iota * 2
-	vitamins, protein
-	carbohydrates, _
-	_, water
-)

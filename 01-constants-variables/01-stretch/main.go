@@ -9,10 +9,3 @@ package main
 
 	Hint: if you've written any numbers, you've done it wrong!
 */
-
-const (
-	Agape int = iota
-	Phileo
-	Storge
-	Eros
-)

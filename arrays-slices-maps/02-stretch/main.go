@@ -1,7 +1,5 @@
 package main
 
-import "fmt"
-
 /*
   Resources: https://golang.org/doc/effective_go.html#for
 
@@ -11,30 +9,5 @@ will yield [[0,1,2] [3,4,5] [6,7,8]]. You can set them manually, but try to use 
 Print each index of threeByThree. */
 
 func main() {
-	threeByThree := make([][]int, 3)
-	// manually creating
-	// threeByThree[0] = make([]int, 3)
-	// threeByThree[1] = make([]int, 3)
-	// threeByThree[2] = make([]int, 3)
-	//
-	// threeByThree[0][0] = 0
-	// threeByThree[0][1] = 1
-	// threeByThree[0][2] = 2
-	// threeByThree[1][0] = 3
-	// threeByThree[1][1] = 4
-	// threeByThree[1][2] = 5
-	// threeByThree[2][0] = 6
-	// threeByThree[2][1] = 7
-	// threeByThree[2][2] = 8
 
-	// using for loops to create
-	var count int
-	for i := 0; i < len(threeByThree); i++ {
-		threeByThree[i] = make([]int, 3)
-		for j := 0; j < len(threeByThree[i]); j++ {
-			threeByThree[i][j] = count
-			count = count + 1
-		}
-	}
-	fmt.Println(threeByThree)
 }

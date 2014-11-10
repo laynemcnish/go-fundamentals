@@ -21,9 +21,7 @@ func TestMove(t *testing.T) {
 }
 
 func TestRateChange(t *testing.T) {
-	test1 := Position{x: 2, y: 4, dx: 1, dy: 3}
-	test2 := Position{x: 2, y: 4, dx: 1, dy: 3}
-	tests := []Position{test1, test2}
+	tests := []Position{Position{x: 2, y: 4, dx: 1, dy: 3}, Position{x: 4, y: 8, dx: 2, dy: -7}}
 	for _, tt := range tests {
 		preDx := tt.dx
 		preDy := tt.dy

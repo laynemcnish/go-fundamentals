@@ -19,3 +19,18 @@ func TestMove(t *testing.T) {
 		}
 	}
 }
+
+func TestRateChange(t *testing.T) {
+	test1 := Position{x: 2, y: 4, dx: 1, dy: 3}
+	test2 := Position{x: 2, y: 4, dx: 1, dy: 3}
+	tests := []Position{test1, test2}
+	for _, tt := range tests {
+		preDx := tt.dx
+		preDy := tt.dy
+		result := tt.RateChange(1, 2)
+		if result.dx != preDx+1 || result.dy != preDy+2 {
+			t.Errorf("Position %v called RateChange(1, 2), Position.dx == %v, Position.dy == %v, want %v, %v",
+				tt, result.dx, result.dy, preDx+1, preDy+2)
+		}
+	}
+}

@@ -3,6 +3,7 @@ package main
 import (
 	"fmt"
 	"math/rand"
+	"strings"
 	"testing"
 )
 
@@ -79,6 +80,9 @@ func TestAttackAd(t *testing.T) {
 	for i := 0; i < 100; i++ {
 		x := AttackAd("Ted", attacks)
 		if x != first {
+			if !strings.Contains(x, "Ted") {
+				t.Errorf("Not properly replacing [insert name here] with name")
+			}
 			return
 		}
 	}
